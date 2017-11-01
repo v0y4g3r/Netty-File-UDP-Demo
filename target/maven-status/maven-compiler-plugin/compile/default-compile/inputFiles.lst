@@ -1,0 +1,10 @@
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/entity/Message.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/entity/FileSegment.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/client/Client.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/AppConfig.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/entity/codec/MessageDecoder.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/server/Server.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/client/ClientInboundHandler.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/server/ServerInboundHandler.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/entity/codec/MessageEncoder.java
+/home/lei/workspace/IdeaProjects/nettyspringfileserver/src/main/java/pku/netlab/Test.java
