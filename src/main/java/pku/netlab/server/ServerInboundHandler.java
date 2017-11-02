@@ -1,6 +1,6 @@
 package pku.netlab.server;
 
-import io.netty.buffer.Unpooled;
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pku.netlab.entity.Message;
 
-import java.net.InetSocketAddress;
+import java.io.RandomAccessFile;
 
 
 /**
@@ -31,7 +31,13 @@ public class ServerInboundHandler extends ChannelInboundHandlerAdapter {
         logger.debug("SERVER: Channel read!");
         Message message = (Message) msg;
         logger.debug("{}:{}", message.getSender(), message.toString());
-        ctx.channel().writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer("ACK".getBytes()), message.getSender()));
+        RandomAccessFile raf = new RandomAccessFile("data/data.txt", "rw");
+        raf.seek(0);
+        int length = message.getEnd() - message.getStart();
+        byte[] barr = new byte[length];
+        raf.read(barr, 0, length);
+        ByteBuf b = ctx.channel().alloc().buffer(length).writeBytes(barr);
+        ctx.writeAndFlush(new DatagramPacket(b, message.getSender()));
     }
 
     @Override

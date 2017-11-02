@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 import pku.netlab.entity.codec.MessageDecoder;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 @PropertySource("classpath:config.properties")
@@ -23,7 +24,6 @@ public class Server {
     @Value("${SERVER.PORT}")
     private int port;
     private EventLoopGroup workers;
-
     private Bootstrap b;
 
     public Server(@Autowired @Qualifier("serverWorkers") EventLoopGroup workers) {
@@ -58,6 +58,7 @@ public class Server {
         }
     }
 
+    @PreDestroy
     public void shutdown() {
         try {
             this.workers.shutdownGracefully().sync();

@@ -24,7 +24,7 @@ public class ClientInboundHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         logger.debug("CLIENT:Channel active!");
-        ctx.writeAndFlush(new Message(1, 19, recipient));
+        ctx.writeAndFlush(new Message(0, 20, recipient));
     }
 
     @Override

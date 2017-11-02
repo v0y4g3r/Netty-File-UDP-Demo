@@ -6,10 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nettyspringfileserver" />
+        <module name="netty-spring-fileserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="netty-spring-fileserver" target="1.8" />
       <module name="nettyspringfileserver" target="1.8" />
     </bytecodeTargetLevel>
   </component>

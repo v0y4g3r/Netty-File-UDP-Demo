@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/nettyspringfileserver.iml" filepath="$PROJECT_DIR$/nettyspringfileserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-spring-fileserver.iml" filepath="$PROJECT_DIR$/netty-spring-fileserver.iml" />
     </modules>
   </component>
 </project>
